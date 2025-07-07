@@ -16,6 +16,7 @@ const Projects: React.FC = () => {
       ],
       icon: <Server className="w-6 h-6" />,
       color: 'from-blue-500 to-blue-600',
+      githubUrl: 'https://github.com/Manasi6901/ci-cd-pipeline-project'
     },
     {
       title: 'Full DevOps CI/CD Workflow',
@@ -29,6 +30,7 @@ const Projects: React.FC = () => {
       ],
       icon: <Code className="w-6 h-6" />,
       color: 'from-green-500 to-green-600',
+      githubUrl: 'https://github.com/Manasi6901/myapp'
     },
     {
       title: 'Flask + MySQL on Kubernetes (AWS EC2)',
@@ -42,6 +44,7 @@ const Projects: React.FC = () => {
       ],
       icon: <Database className="w-6 h-6" />,
       color: 'from-purple-500 to-purple-600',
+      githubUrl: 'https://github.com/Manasi6901/flask-mysql-k8s'
     },
   ];
 
@@ -111,12 +114,10 @@ const Projects: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex gap-3 mt-auto">
-                <button className="flex items-center px-4 py-2 bg-[#fa5814] text-white text-sm font-medium rounded-lg hover:bg-[#ff6d33] transition-colors duration-200 opacity-60 cursor-not-allowed">
+              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-2 bg-[#fa5814] text-white text-sm font-medium rounded-lg hover:bg-[#ff6d33] transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-[#fa5814]/25" >
                   <Github className="w-4 h-4 mr-2" />
-                  Private Repo
-                </button>
-              </div>
+                    View Code
+              </a>
 
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#fa5814]/0 to-[#ff6d33]/0 group-hover:from-[#fa5814]/5 group-hover:to-[#ff6d33]/5 transition-all duration-300 pointer-events-none" />
             </motion.div>
