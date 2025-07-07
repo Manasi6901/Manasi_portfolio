@@ -11,7 +11,7 @@ const Certifications: React.FC = () => {
       description: 'Advanced automation techniques combining Linux system administration with Generative AI applications for enhanced productivity and intelligent automation.',
       skills: ['Linux Administration', 'GenAI Integration', 'Automation', 'System Optimization'],
       color: 'from-blue-500 to-blue-600',
-      certificateUrl: 'https://drive.google.com/file/d/1_bmTyB9lrXfJ1B9ow_RDINwB9v1w9yEn/view',
+      certificateUrl: 'https://www.udemy.com/certificate/UC-745379f2-6829-4bfa-8658-0587aa835f1c/',
     },
     {
       title: 'Mastering Git & GitHub',
@@ -20,7 +20,7 @@ const Certifications: React.FC = () => {
       description: 'Comprehensive version control mastery covering advanced Git workflows, GitHub collaboration, and best practices for software development teams.',
       skills: ['Git Workflows', 'GitHub Actions', 'Collaboration', 'Version Control'],
       color: 'from-green-500 to-green-600',
-      certificateUrl: 'https://drive.google.com/file/d/1_glre1eSMiDFVDtE0YPgjslx4dHWSoYi/view',
+      certificateUrl: 'https://www.udemy.com/certificate/UC-737ce394-4cf6-494b-8726-cd3c86eb2008/',
     },
   ];
 
