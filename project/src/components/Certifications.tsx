@@ -92,11 +92,23 @@ const Certifications: React.FC = () => {
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse" />
                   Verified Certificate
                 </div>
-                <button className="flex items-center px-4 py-2 bg-[#fa5814] text-white text-sm font-medium rounded-lg hover:bg-[#ff6d33] transition-colors duration-200 opacity-60 cursor-not-allowed">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  View Certificate
-                </button>
-              </div>
+                
+               {cert.certificateUrl && cert.certificateUrl !== '#' ? (
+                  <a
+                    href={cert.certificateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center px-4 py-2 bg-[#fa5814] text-white text-sm font-medium rounded-lg hover:bg-[#ff6d33] transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-[#fa5814]/25"
+                     >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                      View Certificate
+                     </a>
+              ) : (
+                  <span className="flex items-center px-4 py-2 bg-gray-600 text-gray-300 text-sm font-medium rounded-lg cursor-not-allowed">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                  Certificate Available
+                  </span>
+                  )}
 
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#fa5814]/0 to-[#ff6d33]/0 group-hover:from-[#fa5814]/5 group-hover:to-[#ff6d33]/5 transition-all duration-300 pointer-events-none" />
             </motion.div>
