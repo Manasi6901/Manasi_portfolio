@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   const handleResumeDownload = () => {
     const link = document.createElement('a');
     link.href = 'https://drive.google.com/file/d/1_Ua9UNBL7ZDjE6XCHISgHDD3WE6-hsSj/view?usp=drivesdk';
-    link.download = 'Manasi_Patil_Resume.pdf';
+    link.download = 'https://drive.google.com/file/d/1_Ua9UNBL7ZDjE6XCHISgHDD3WE6-hsSj/view?usp=drivesdk';
     link.click();
   };
 
