@@ -5,16 +5,16 @@ import { GraduationCap, Heart, Globe, Target } from 'lucide-react';
 const About: React.FC = () => {
   const educationData = [
     {
-      degree: 'MCA',
+      degree: 'Master of Computer Application(MCA)',
       percentage: '68%',
-      institution: 'YCSRD',
+      institution: 'Yashwantrao Chavan School of Rural Development, Shivaji University',
       duration: '2022–2024',
       icon: <GraduationCap className="w-6 h-6" />,
     },
     {
-      degree: 'BCA',
+      degree: 'Bachloer of Computer Application(BCA)',
       percentage: '77%',
-      institution: 'Kamala College',
+      institution: 'Kamala College, Shivaji University',
       duration: '2019–2022',
       icon: <GraduationCap className="w-6 h-6" />,
     },
@@ -57,7 +57,7 @@ const About: React.FC = () => {
                   <Heart className="w-6 h-6 text-[#fa5814] mr-3" />
                   <div>
                     <h4 className="text-white font-semibold">Passion</h4>
-                    <p className="text-[#cbd5e1] text-sm">DevOps, Cloud, Linux, GenAI</p>
+                    <p className="text-[#cbd5e1] text-sm">DevOps, Cloud, Linux</p>
                   </div>
                 </div>
                 <div className="flex items-center">
