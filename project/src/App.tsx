@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#0a0b2e] via-[#1e1b4b] to-[#312e81] text-white">
       <Navigation activeSection={activeSection} />
       
       <motion.main
