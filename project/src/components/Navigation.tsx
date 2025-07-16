@@ -45,12 +45,12 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#0f0f0f]/95 backdrop-blur-lg border-b border-gray-800' : 'bg-transparent'
+      isScrolled ? 'bg-background/95 backdrop-blur-lg border-b border-gray-800' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <span className="text-xl font-bold text-white">Manasi Patil</span>
+            <span className="text-xl font-bold text-text-light">Manasi Patil</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -62,8 +62,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
                   onClick={() => scrollToSection(item.id)}
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                     activeSection === item.id
-                      ? 'text-[#fa5814] border-b-2 border-[#fa5814]'
-                      : 'text-gray-300 hover:text-white hover:text-[#ff6d33]'
+                      ? 'text-highlight-orange border-b-2 border-highlight-orange'
+                      : 'text-text-gray hover:text-text-light hover:text-[#ff6d33]'
                   }`}
                 >
                   {item.label}
@@ -71,7 +71,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
               ))}
               <button
                 onClick={handleResumeDownload}
-                className="ml-4 inline-flex items-center px-4 py-2 bg-[#fa5814] text-white text-sm font-medium rounded-md hover:bg-[#ff6d33] transition-colors duration-200"
+                className="ml-4 inline-flex items-center px-4 py-2 bg-highlight-orange text-text-light text-sm font-medium rounded-md hover:bg-[#ff6d33] transition-colors duration-200"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Resume
@@ -83,7 +83,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[#fa5814]"
+              className="inline-flex items-center justify-center p-2 rounded-md text-text-gray hover:text-text-light hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-highlight-orange"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -93,7 +93,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#0f0f0f]/95 backdrop-blur-lg border-t border-gray-800">
+        <div className="md:hidden bg-background/95 backdrop-blur-lg border-t border-gray-800">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <button
@@ -101,8 +101,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
                 onClick={() => scrollToSection(item.id)}
                 className={`block w-full text-left px-3 py-2 text-base font-medium transition-colors duration-200 ${
                   activeSection === item.id
-                    ? 'text-[#fa5814] bg-gray-800'
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                    ? 'text-highlight-orange bg-gray-800'
+                    : 'text-text-gray hover:text-text-light hover:bg-gray-700'
                 }`}
               >
                 {item.label}
@@ -110,7 +110,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
             ))}
             <button
               onClick={handleResumeDownload}
-              className="w-full flex items-center justify-center px-3 py-2 mt-4 bg-[#fa5814] text-white text-base font-medium rounded-md hover:bg-[#ff6d33] transition-colors duration-200"
+              className="w-full flex items-center justify-center px-3 py-2 mt-4 bg-highlight-orange text-text-light text-base font-medium rounded-md hover:bg-[#ff6d33] transition-colors duration-200"
             >
               <Download className="w-4 h-4 mr-2" />
               Download Resume

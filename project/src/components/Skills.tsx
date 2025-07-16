@@ -64,7 +64,7 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-[#0f0f0f]">
+    <section id="skills" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,16 +73,16 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Skills & Expertise</h2>
-          <div className="w-24 h-1 bg-[#fa5814] mx-auto rounded-full mb-4" />
-          <p className="text-[#cbd5e1] text-lg max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-text-light mb-4">Skills & Expertise</h2>
+          <div className="w-24 h-1 bg-highlight-orange mx-auto rounded-full mb-4" />
+          <p className="text-text-gray text-lg max-w-3xl mx-auto">
             Comprehensive skill set in modern DevOps practices, cloud technologies, and automation tools.
           </p>
         </motion.div>
 
         {/* Technical Skills */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Technical Skills</h3>
+          <h3 className="text-2xl font-bold text-text-light mb-8 text-center">Technical Skills</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => (
               <motion.div
@@ -91,13 +91,13 @@ const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl p-6 border border-gray-800 hover:border-[#fa5814] transition-all duration-300 hover:shadow-xl hover:shadow-[#fa5814]/10"
+                className="bg-gradient-to-br from-background-dark to-[#2a2a2a] rounded-2xl p-6 border border-gray-800 hover:border-highlight-orange transition-all duration-300 hover:shadow-xl hover:shadow-highlight-orange/10"
               >
                 <div className="flex items-center mb-4">
                   <div className={`bg-gradient-to-r ${category.color} rounded-full p-3 mr-4`}>
                     {category.icon}
                   </div>
-                  <h4 className="text-lg font-bold text-white">{category.title}</h4>
+                  <h4 className="text-lg font-bold text-text-light">{category.title}</h4>
                 </div>
                 
                 <div className="space-y-2">
@@ -108,15 +108,15 @@ const Skills: React.FC = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: skillIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className="flex items-center justify-between p-2 bg-[#0f0f0f] rounded-lg"
+                      className="flex items-center justify-between p-2 bg-background rounded-lg"
                     >
-                      <span className="text-[#cbd5e1] font-medium">{skill}</span>
+                      <span className="text-text-gray font-medium">{skill}</span>
                       <div className="flex space-x-1">
                         {[...Array(5)].map((_, i) => (
                           <div
                             key={i}
                             className={`w-2 h-2 rounded-full ${
-                              i < 4 ? 'bg-[#fa5814]' : 'bg-gray-600'
+                              i < 4 ? 'bg-highlight-orange' : 'bg-gray-600'
                             }`}
                           />
                         ))}
@@ -131,7 +131,7 @@ const Skills: React.FC = () => {
 
         {/* Soft Skills */}
         <div>
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Soft Skills</h3>
+          <h3 className="text-2xl font-bold text-text-light mb-8 text-center">Soft Skills</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {softSkills.map((skill, index) => (
               <motion.div
@@ -140,13 +140,13 @@ const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-xl p-6 border border-gray-800 hover:border-[#fa5814] transition-all duration-300 text-center group"
+                className="bg-gradient-to-br from-background-dark to-[#2a2a2a] rounded-xl p-6 border border-gray-800 hover:border-highlight-orange transition-all duration-300 text-center group"
               >
-                <div className="bg-[#fa5814] rounded-full p-4 w-16 h-16 mx-auto mb-4 group-hover:bg-[#ff6d33] transition-colors duration-300">
+                <div className="bg-highlight-orange rounded-full p-4 w-16 h-16 mx-auto mb-4 group-hover:bg-[#ff6d33] transition-colors duration-300">
                   {skill.icon}
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">{skill.title}</h4>
-                <p className="text-[#cbd5e1] text-sm">{skill.description}</p>
+                <h4 className="text-lg font-bold text-text-light mb-2">{skill.title}</h4>
+                <p className="text-text-gray text-sm">{skill.description}</p>
               </motion.div>
             ))}
           </div>

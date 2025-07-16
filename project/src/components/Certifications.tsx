@@ -25,7 +25,7 @@ const Certifications: React.FC = () => {
   ];
 
   return (
-    <section id="certifications" className="py-20 bg-gradient-to-b from-[#1a1a1a] to-[#0f0f0f]">
+    <section id="certifications" className="py-20 bg-gradient-to-b from-background-dark to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,9 +34,9 @@ const Certifications: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Certifications</h2>
-          <div className="w-24 h-1 bg-[#fa5814] mx-auto rounded-full mb-4" />
-          <p className="text-[#cbd5e1] text-lg max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-text-light mb-4">Certifications</h2>
+          <div className="w-24 h-1 bg-highlight-orange mx-auto rounded-full mb-4" />
+          <p className="text-text-gray text-lg max-w-3xl mx-auto">
             Continuous learning and professional development in cutting-edge technologies.
           </p>
         </motion.div>
@@ -49,7 +49,7 @@ const Certifications: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="group relative bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl p-8 border border-gray-800 hover:border-[#fa5814] transition-all duration-300 hover:shadow-xl hover:shadow-[#fa5814]/10"
+              className="group relative bg-gradient-to-br from-background-dark to-[#2a2a2a] rounded-2xl p-8 border border-gray-800 hover:border-highlight-orange transition-all duration-300 hover:shadow-xl hover:shadow-highlight-orange/10"
             >
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center">
@@ -57,29 +57,29 @@ const Certifications: React.FC = () => {
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-[#fa5814] transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-text-light group-hover:text-highlight-orange transition-colors duration-300">
                       {cert.title}
                     </h3>
-                    <p className="text-[#fa5814] font-semibold">{cert.provider}</p>
+                    <p className="text-highlight-orange font-semibold">{cert.provider}</p>
                   </div>
                 </div>
-                <div className="flex items-center text-[#cbd5e1] text-sm">
+                <div className="flex items-center text-text-gray text-sm">
                   <Calendar className="w-4 h-4 mr-1" />
                   {cert.date}
                 </div>
               </div>
 
-              <p className="text-[#cbd5e1] mb-6 leading-relaxed">
+              <p className="text-text-gray mb-6 leading-relaxed">
                 {cert.description}
               </p>
 
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-[#fa5814] mb-3">KEY SKILLS ACQUIRED:</h4>
+                <h4 className="text-sm font-semibold text-highlight-orange mb-3">KEY SKILLS ACQUIRED:</h4>
                 <div className="flex flex-wrap gap-2">
                   {cert.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-3 py-1 bg-[#fa5814]/20 text-[#fa5814] text-xs font-medium rounded-full border border-[#fa5814]/30"
+                      className="px-3 py-1 bg-highlight-orange/20 text-highlight-orange text-xs font-medium rounded-full border border-highlight-orange/30"
                     >
                       {skill}
                     </span>
@@ -88,17 +88,17 @@ const Certifications: React.FC = () => {
               </div>
 
               <div className="flex justify-between items-center">
-                <div className="flex items-center text-[#cbd5e1] text-sm">
+                <div className="flex items-center text-text-gray text-sm">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse" />
                   Verified Certificate
                 </div>
-                <button className="flex items-center px-4 py-2 bg-[#fa5814] text-white text-sm font-medium rounded-lg hover:bg-[#ff6d33] transition-colors duration-200 opacity-60 cursor-not-allowed">
+                <button className="flex items-center px-4 py-2 bg-highlight-orange text-text-light text-sm font-medium rounded-lg hover:bg-[#ff6d33] transition-colors duration-200 opacity-60 cursor-not-allowed">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Certificate
                 </button>
               </div>
 
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#fa5814]/0 to-[#ff6d33]/0 group-hover:from-[#fa5814]/5 group-hover:to-[#ff6d33]/5 transition-all duration-300 pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-highlight-orange/0 to-[#ff6d33]/0 group-hover:from-highlight-orange/5 group-hover:to-[#ff6d33]/5 transition-all duration-300 pointer-events-none" />
             </motion.div>
           ))}
         </div>
@@ -110,9 +110,9 @@ const Certifications: React.FC = () => {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <div className="bg-gradient-to-r from-[#fa5814]/10 to-[#ff6d33]/10 rounded-xl p-8 border border-[#fa5814]/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Continuous Learning</h3>
-            <p className="text-[#cbd5e1] text-lg max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-highlight-orange/10 to-[#ff6d33]/10 rounded-xl p-8 border border-highlight-orange/20">
+            <h3 className="text-2xl font-bold text-text-light mb-4">Continuous Learning</h3>
+            <p className="text-text-gray text-lg max-w-2xl mx-auto">
               Committed to staying current with emerging technologies and industry best practices. 
               Currently pursuing additional certifications in cloud architecture and AI/ML integration.
             </p>

@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background-dark to-background" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
@@ -27,12 +27,12 @@ const Hero: React.FC = () => {
             className="mb-8"
           >
             <div className="relative inline-block">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-[#fa5814] to-[#ff6d33] p-1 mb-6 mx-auto">
-                <div className="w-full h-full rounded-full bg-[#0f0f0f] flex items-center justify-center">
-                  <span className="text-4xl md:text-6xl font-bold text-[#fa5814]">MP</span>
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-highlight-orange to-[#ff6d33] p-1 mb-6 mx-auto">
+                <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
+                  <span className="text-4xl md:text-6xl font-bold text-highlight-orange">MP</span>
                 </div>
               </div>
-              <div className="absolute inset-0 rounded-full bg-[#fa5814] opacity-20 blur-xl animate-pulse" />
+              <div className="absolute inset-0 rounded-full bg-highlight-orange opacity-20 blur-xl animate-pulse" />
             </div>
           </motion.div>
 
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-light mb-4"
           >
             Manasi Patil
           </motion.h1>
@@ -51,10 +51,10 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-6"
           >
-            <p className="text-xl md:text-2xl text-[#fa5814] font-semibold mb-2">
+            <p className="text-xl md:text-2xl text-highlight-orange font-semibold mb-2">
               DevOps & Cloud Engineer
             </p>
-            <div className="flex flex-wrap justify-center gap-2 text-sm md:text-base text-[#cbd5e1]">
+            <div className="flex flex-wrap justify-center gap-2 text-sm md:text-base text-text-gray">
               <span>DevOps</span> <span>•</span>
               <span>Linux</span> <span>•</span>
               <span>Docker</span> <span>•</span>
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-[#cbd5e1] mb-8 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-text-gray mb-8 max-w-3xl mx-auto"
           >
             "Automating cloud-native DevOps solutions with precision and innovation."
           </motion.p>
@@ -85,14 +85,14 @@ const Hero: React.FC = () => {
           >
             <button
               onClick={scrollToProjects}
-              className="inline-flex items-center px-8 py-3 bg-[#fa5814] text-white text-lg font-medium rounded-lg hover:bg-[#ff6d33] transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-[#fa5814]/25"
+              className="inline-flex items-center px-8 py-3 bg-highlight-orange text-text-light text-lg font-medium rounded-lg hover:bg-[#ff6d33] transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-highlight-orange/25"
             >
               View Projects
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
             <button
               onClick={handleResumeDownload}
-              className="inline-flex items-center px-8 py-3 border-2 border-[#fa5814] text-[#fa5814] text-lg font-medium rounded-lg hover:bg-[#fa5814] hover:text-white transition-all duration-200 hover:scale-105"
+              className="inline-flex items-center px-8 py-3 border-2 border-highlight-orange text-highlight-orange text-lg font-medium rounded-lg hover:bg-highlight-orange hover:text-text-light transition-all duration-200 hover:scale-105"
             >
               <Download className="mr-2 w-5 h-5" />
               Download Resume
@@ -103,9 +103,9 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex items-center justify-center text-[#cbd5e1]"
+            className="flex items-center justify-center text-text-gray"
           >
-            <MapPin className="w-5 h-5 mr-2 text-[#fa5814]" />
+            <MapPin className="w-5 h-5 mr-2 text-highlight-orange" />
             <span>Ravet, Pune</span>
           </motion.div>
         </div>
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute bg-[#fa5814] rounded-full opacity-10"
+            className="absolute bg-highlight-orange rounded-full opacity-10"
             style={{
               width: Math.random() * 20 + 10,
               height: Math.random() * 20 + 10,
