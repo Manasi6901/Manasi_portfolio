@@ -17,7 +17,6 @@ const Contact: React.FC = () => {
     
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    console.log('Form submitted:', formData);
     alert('Thank you for your message! I will get back to you soon.');
     setFormData({ name: '', email: '', message: '' });
     setIsSubmitting(false);
