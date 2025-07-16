@@ -1,220 +1,105 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
-interface NavigationProps {
-  activeSection: string;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
+const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  const navLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Certifications', href: '#certifications' },
-    { name: 'Contact', href: '#contact' },
+  const navItems = [
+    { label: 'Skills Offering', href: '#skills' },
+    { label: 'Developer Platform', href: '#platform' },
+    { label: 'Portfolio Solutions', href: '#solutions' },
+    { label: 'Resources', href: '#resources' },
+    { label: 'About', href: '#about' },
+    { label: 'Experience', href: '#experience' }
   ];
-
-  const socialLinks = [
-    {
-      name: 'GitHub',
-      href: 'https://github.com/Manasi6901',
-      icon: <Github className="w-5 h-5" />,
-    },
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/in/manasi-patil6',
-      icon: <Linkedin className="w-5 h-5" />,
-    },
-    {
-      name: 'Email',
-      href: 'mailto:manasipatil.6901@gmail.com',
-      icon: <Mail className="w-5 h-5" />,
-    },
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleNavClick = (href: string) => {
-    setIsMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.8 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-[#0a0b2e]/90 backdrop-blur-md border-b border-white/10' 
-          : 'bg-transparent'
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center"
+            transition={{ duration: 0.6 }}
+            className="flex items-center space-x-2"
           >
-            <div className="relative">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-                <span className="text-lg lg:text-xl font-bold text-white">MP</span>
-              </div>
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 opacity-20 blur-lg animate-pulse" />
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">M</span>
             </div>
-            <div className="ml-3 hidden sm:block">
-              <h1 className="text-lg lg:text-xl font-bold text-white">Manasi Patil</h1>
-              <p className="text-xs lg:text-sm text-gray-400">DevOps Engineer</p>
-            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              ManRow
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
-            {navLinks.map((link, index) => (
-              <motion.button
-                key={link.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                onClick={() => handleNavClick(link.href)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  activeSection === link.href.substring(1)
-                    ? 'bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white border border-blue-500/30'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                {link.name}
-              </motion.button>
-            ))}
-          </div>
-
-          {/* Social Links & CTA - Desktop */}
-          <div className="hidden lg:flex items-center space-x-3">
-            {socialLinks.map((social, index) => (
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item, index) => (
               <motion.a
-                key={social.name}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 + (0.1 * index) }}
-                href={social.href}
-                target={social.href.startsWith('http') ? '_blank' : '_self'}
-                rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
-                title={social.name}
+                key={item.label}
+                href={item.href}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative group"
               >
-                {social.icon}
+                {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
-            
-            <motion.button
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              onClick={() => handleNavClick('#contact')}
-              className="ml-4 px-6 py-2 bg-gradient-to-r from-emerald-500 to-blue-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
-            >
-              Let's Talk
-            </motion.button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <motion.button
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </motion.button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ 
-          opacity: isMenuOpen ? 1 : 0, 
-          height: isMenuOpen ? 'auto' : 0 
-        }}
-        transition={{ duration: 0.3 }}
-        className="lg:hidden overflow-hidden bg-[#0a0b2e]/95 backdrop-blur-md border-t border-white/10"
-      >
-        <div className="px-4 py-6 space-y-3">
-          {/* Mobile Navigation Links */}
-          {navLinks.map((link, index) => (
-            <motion.button
-              key={link.name}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ 
-                opacity: isMenuOpen ? 1 : 0, 
-                x: isMenuOpen ? 0 : -20 
-              }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              onClick={() => handleNavClick(link.href)}
-              className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${
-                activeSection === link.href.substring(1)
-                  ? 'bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white border border-blue-500/30'
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-            >
-              {link.name}
-            </motion.button>
-          ))}
-
-          {/* Mobile Social Links */}
+          {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ 
-              opacity: isMenuOpen ? 1 : 0, 
-              y: isMenuOpen ? 0 : 20 
-            }}
-            transition={{ duration: 0.3, delay: 0.4 }}
-            className="pt-4 border-t border-white/10"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="hidden md:flex items-center space-x-4"
           >
-            <div className="flex items-center justify-center space-x-4 mb-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target={social.href.startsWith('http') ? '_blank' : '_self'}
-                  rel="noopener noreferrer"
-                  className="p-3 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
-                  title={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-            
-            <button
-              onClick={() => handleNavClick('#contact')}
-              className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
-            >
-              Let's Talk
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
+              Get Started
             </button>
           </motion.div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
-      </motion.div>
-    </motion.nav>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden py-4 border-t border-white/10"
+          >
+            <div className="flex flex-col space-y-3">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full font-medium mt-4 w-full">
+                Get Started
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </div>
+    </nav>
   );
 };
 
