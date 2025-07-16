@@ -77,12 +77,12 @@ const Footer: React.FC = () => {
             </div>
             
             <div className="flex space-x-4">
-              {socialLinks.map((link, index) => (
+              {socialLinks.map((link) => (
                 <motion.a
                   key={link.name}
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                   href={link.href}
                   target="_blank"
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
           >
             <h4 className="text-lg font-semibold text-white mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
+              {quickLinks.map((link) => (
                 <li key={link.name}>
                   <button
                     onClick={() => handleNavClick(link.href)}

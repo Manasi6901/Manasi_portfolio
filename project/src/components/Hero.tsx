@@ -1,15 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, MapPin, Github } from 'lucide-react';
+import { MapPin, Github } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'Manasi_Patil_Resume.pdf';
-    link.click();
-  };
-
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
