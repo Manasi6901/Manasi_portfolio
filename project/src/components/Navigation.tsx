@@ -11,12 +11,12 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Certifications', href: '#certifications' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'AI Offering', href: '#ai-offering' },
+    { name: 'Agent Platform', href: '#agent-platform' },
+    { name: 'AI Solutions', href: '#ai-solutions' },
+    { name: 'Resources', href: '#resources' },
+    { name: 'Company', href: '#company' },
+    { name: 'Academy', href: '#academy' },
   ];
 
   const socialLinks = [
@@ -97,8 +97,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
                 onClick={() => handleNavClick(link.href)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === link.href.substring(1)
-                    ? 'bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white border border-blue-500/30'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    ? 'bg-gradient-to-r from-neon-cyan/30 to-neon-magenta/30 text-white border border-neon-cyan/40 shadow-neon-cyan'
+                    : 'text-gray-300 hover:text-neon-cyan hover:bg-glass-bg hover:shadow-neon-cyan'
                 }`}
               >
                 {link.name}

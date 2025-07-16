@@ -50,11 +50,11 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight text-center"
             >
-              Efficient DevOps
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Made Simple.
+              Efficient Automation
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-magenta">
+                Made Easy.
               </span>
             </motion.h1>
 
@@ -62,31 +62,23 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed"
+              className="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed text-center mx-auto"
             >
-              Transform your infrastructure with intelligent automation. I design, implement, and optimize CI/CD pipelines that deliver exceptional results effortlessly.
+              Automate your business with next-gen AI and agent platforms. Streamline processes, boost productivity, and grow effortlessly.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 mb-8"
+              className="flex justify-center mb-8"
             >
               <button
                 onClick={scrollToProjects}
-                className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center"
+                className="px-10 py-4 bg-gradient-to-r from-neon-cyan to-neon-magenta text-white rounded-full font-semibold shadow-neon-cyan hover:shadow-neon-magenta transition-all duration-300 text-lg"
+                style={{ boxShadow: '0 0 24px 4px #00ffe7, 0 0 48px 8px #ff00c8' }}
               >
-                View My Work
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              
-              <button
-                onClick={handleResumeDownload}
-                className="px-8 py-4 border border-gray-600 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download Resume
+                Get Started
               </button>
             </motion.div>
 
