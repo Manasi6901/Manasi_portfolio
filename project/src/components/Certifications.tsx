@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award } from 'lucide-react';
 
+// Build timestamp: 2025-01-16 21:07 - Force fresh deployment
 const Certifications: React.FC = () => {
   return (
     <section id="certifications" className="py-20 bg-slate-900">
