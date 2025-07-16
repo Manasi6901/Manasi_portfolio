@@ -64,7 +64,6 @@ const Certifications: React.FC = () => {
   return (
     <section id="certifications" className="py-20 bg-gradient-to-b from-[#1e1b4b] to-[#0a0b2e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +80,6 @@ const Certifications: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Learning Statistics */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +98,6 @@ const Certifications: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Current Certifications */}
         <div className="mb-16">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
@@ -123,7 +120,6 @@ const Certifications: React.FC = () => {
                 className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden group"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8">
-                  {/* Certificate Info */}
                   <div className="lg:col-span-2 space-y-6">
                     <div className="flex items-start justify-between">
                       <div className="flex items-center gap-4">
@@ -145,7 +141,6 @@ const Certifications: React.FC = () => {
 
                     <p className="text-gray-300 leading-relaxed">{cert.description}</p>
 
-                    {/* Skills Gained */}
                     <div>
                       <h5 className="text-white font-semibold mb-3 flex items-center">
                         <Star className="w-4 h-4 mr-2 text-yellow-400" />
@@ -163,7 +158,6 @@ const Certifications: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Action Button */}
                     <div>
                       <a
                         href={cert.certificateUrl}
@@ -178,9 +172,7 @@ const Certifications: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Certificate Details */}
                   <div className="space-y-6">
-                    {/* Certificate Meta */}
                     <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl p-6 border border-white/10">
                       <h5 className="text-white font-semibold mb-4 flex items-center">
                         <Calendar className="w-4 h-4 mr-2 text-blue-400" />
@@ -215,7 +207,6 @@ const Certifications: React.FC = () => {
           </div>
         </div>
 
-        {/* Learning Goals */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -262,7 +253,6 @@ const Certifications: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -15,7 +15,6 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     console.log('Form submitted:', formData);
@@ -86,7 +85,6 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-[#0a0b2e] to-[#1e1b4b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,7 +102,6 @@ const Contact: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -191,7 +188,6 @@ const Contact: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Contact Info Sidebar */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -199,7 +195,6 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            {/* Contact Information */}
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -245,7 +240,6 @@ const Contact: React.FC = () => {
               ))}
             </div>
 
-            {/* Quick Actions */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -277,7 +271,6 @@ const Contact: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Availability Status */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

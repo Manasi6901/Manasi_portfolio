@@ -82,7 +82,6 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-[#0a0b2e] to-[#1e1b4b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +98,6 @@ const Projects: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Project Statistics */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +116,6 @@ const Projects: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Projects Grid */}
         <div className="space-y-8">
           {projects.map((project, index) => (
             <motion.div
@@ -130,7 +127,6 @@ const Projects: React.FC = () => {
               className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8">
-                {/* Project Info */}
                 <div className="lg:col-span-2 space-y-6">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-4">
@@ -155,7 +151,6 @@ const Projects: React.FC = () => {
 
                   <p className="text-gray-300 leading-relaxed">{project.description}</p>
 
-                  {/* Tech Stack */}
                   <div>
                     <h4 className="text-white font-semibold mb-3 flex items-center">
                       <Code className="w-4 h-4 mr-2" />
@@ -173,7 +168,6 @@ const Projects: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Action Buttons */}
                   <div className="flex flex-wrap gap-4">
                     <a
                       href={project.githubUrl}
@@ -192,9 +186,7 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Project Details Sidebar */}
                 <div className="space-y-6">
-                  {/* Key Features */}
                   <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl p-6 border border-white/10">
                     <h4 className="text-white font-semibold mb-4 flex items-center">
                       <Star className="w-4 h-4 mr-2 text-yellow-400" />
@@ -210,7 +202,6 @@ const Projects: React.FC = () => {
                     </ul>
                   </div>
 
-                  {/* Project Metrics */}
                   <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl p-6 border border-white/10">
                     <h4 className="text-white font-semibold mb-4 flex items-center">
                       <GitBranch className="w-4 h-4 mr-2 text-blue-400" />
@@ -231,7 +222,6 @@ const Projects: React.FC = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
