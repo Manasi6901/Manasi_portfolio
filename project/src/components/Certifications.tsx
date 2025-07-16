@@ -62,7 +62,7 @@ const Certifications: React.FC = () => {
   ];
 
   return (
-    <section id="certifications" className="py-20 bg-gradient-to-b from-[#1e1b4b] to-[#0a0b2e]">
+    <section id="certifications" className="py-20 bg-gradient-to-b from-indigo-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,7 @@ const Certifications: React.FC = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {learningStats.map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10">
+            <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
               <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400 mb-2">
                 {stat.number}
               </div>
@@ -117,7 +117,7 @@ const Certifications: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden group"
+                className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden group"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8">
                   <div className="lg:col-span-2 space-y-6">
@@ -150,7 +150,7 @@ const Certifications: React.FC = () => {
                         {cert.skills.map((skill, skillIndex) => (
                           <span
                             key={skillIndex}
-                            className="px-3 py-1 bg-gradient-to-r from-gray-700/50 to-gray-600/50 text-gray-300 rounded-full text-sm border border-gray-600/30"
+                            className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm border border-gray-600/30"
                           >
                             {skill}
                           </span>
@@ -163,17 +163,17 @@ const Certifications: React.FC = () => {
                         href={cert.certificateUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full hover:shadow-2xl hover:shadow-amber-500/25 transition-all duration-300 group/btn"
+                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full hover:shadow-2xl hover:shadow-amber-500/25 transition-all duration-300"
                       >
                         <Award className="w-4 h-4 mr-2" />
                         View Certificate
-                        <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        <ExternalLink className="w-4 h-4 ml-2" />
                       </a>
                     </div>
                   </div>
 
                   <div className="space-y-6">
-                    <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl p-6 border border-white/10">
+                    <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
                       <h5 className="text-white font-semibold mb-4 flex items-center">
                         <Calendar className="w-4 h-4 mr-2 text-blue-400" />
                         Certificate Details
@@ -227,7 +227,7 @@ const Certifications: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex-shrink-0">
@@ -260,7 +260,7 @@ const Certifications: React.FC = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
             <h3 className="text-2xl font-bold text-white mb-4">Learning Never Stops</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Passionate about staying current with emerging technologies and industry best practices. Always eager to learn and apply new skills to real-world challenges.
