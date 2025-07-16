@@ -16,9 +16,6 @@ export default {
         secondary: {
           DEFAULT: '#FA5814',
         },
-        highlight: {
-          orange: '#FA5814',
-        },
         text: {
           light: '#F5F5F5',
           gray: '#E0E0E0',
