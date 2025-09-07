@@ -5,8 +5,8 @@ import { ArrowRight, Download, MapPin } from 'lucide-react';
 const Hero: React.FC = () => {
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1_Ua9UNBL7ZDjE6XCHISgHDD3WE6-hsSj/view?usp=drivesdk';
-    link.download = 'https://drive.google.com/file/d/1_Ua9UNBL7ZDjE6XCHISgHDD3WE6-hsSj/view?usp=drivesdk';
+    link.href = 'https://drive.google.com/file/d/1xHufoABLThMvDfctQvok-42TiWae3BJX/view?usp=drivesdk';
+    link.download = 'https://drive.google.com/file/d/1xHufoABLThMvDfctQvok-42TiWae3BJX/view?usp=drivesdk';
     link.click();
   };
 
