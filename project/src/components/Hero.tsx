@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-[#fa5814] to-[#ff6d33] p-1 mb-6 mx-auto">
                 <div className="w-full h-full rounded-full bg-[#0f0f0f] flex items-center justify-center">
                   <img 
-                    src="/ae1f415b-2842-4f6f-ac15-17f5d4c1f9d2.png" 
+                    src="/WhatsApp Image 2025-09-07 at 15.27.30_3da88552.jpg" 
                     alt="Profile" 
                     className="w-full h-full object-cover rounded-full"
                   />
