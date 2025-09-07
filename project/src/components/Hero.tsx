@@ -29,7 +29,11 @@ const Hero: React.FC = () => {
             <div className="relative inline-block">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-[#fa5814] to-[#ff6d33] p-1 mb-6 mx-auto">
                 <div className="w-full h-full rounded-full bg-[#0f0f0f] flex items-center justify-center">
-                  <span className="text-4xl md:text-6xl font-bold text-[#fa5814]">MP</span>
+                  <img 
+                    src="/ae1f415b-2842-4f6f-ac15-17f5d4c1f9d2.png" 
+                    alt="Profile" 
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
               </div>
               <div className="absolute inset-0 rounded-full bg-[#fa5814] opacity-20 blur-xl animate-pulse" />
